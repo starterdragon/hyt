@@ -16,7 +16,7 @@ public class Rndm{
 	public static void core(Scanner in)
 	{
 	    
-        //System.out.print("[debug] number is: "+ random + "\n");
+        System.out.print("[debug] number is: "+ random + "\n");
 	    System.out.print("\nScore:" + score + "\nChance(s):" + tries + "\nEnter Number: ");
 	    
 	    int guess = in.nextInt();
@@ -28,7 +28,7 @@ public class Rndm{
             core(in); //calls this function
 		} else {
 		    
-		    int check = ((guess > random) ? 0 : 1); //returns 0 if it's lower or 1 if it's higher
+		    int check = ((random > guess) ? 1 : 0); //returns 0 if it's lower or 1 if it's higher
 		    
 			if(tries <= 1) //hack, fix being able to guess when there's 0 chance
 			{
