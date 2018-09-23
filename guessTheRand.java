@@ -9,9 +9,8 @@ public class Rndm{
 	
 	public static void main(String[] args)
 	{
-		Scanner reader = new Scanner (System.in);
-		randomInt();
-		core(reader);
+		randomInt(); //generates the first random number
+		core(new Scanner (System.in));
 	}
 	
 	public static void core(Scanner in)
@@ -26,7 +25,7 @@ public class Rndm{
 	    {
 	        score++; //add score
 	        randomInt(); //new random number
-			core(in); //calls this function
+            core(in); //calls this function
 		} else {
 		    
 		    int check = ((guess > random) ? 0 : 1); //returns 0 if it's lower or 1 if it's higher
@@ -39,7 +38,7 @@ public class Rndm{
 			        // calls core again and resets everything
 			        tries = 3;
 			        score = 0;
-			        randomInt();//new random number
+			        randomInt();
 			        core(in);
 			    } else {
 			        System.out.println("Final Score: " + score); //returns final score
