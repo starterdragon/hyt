@@ -16,7 +16,7 @@ public class Rndm{
 	public static void core(Scanner in)
 	{
 	    
-		System.out.print("[debug] number is: "+ random + "\n");
+		//System.out.print("[debug] number is: "+ random + "\n");
 		System.out.print("\nScore:" + score + "\nChance(s):" + tries + "\nEnter Number: ");
 	    
 	    	int guess = in.nextInt();
