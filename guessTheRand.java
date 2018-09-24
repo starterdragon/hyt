@@ -16,19 +16,19 @@ public class Rndm{
 	public static void core(Scanner in)
 	{
 	    
-            System.out.print("[debug] number is: "+ random + "\n");
-	    System.out.print("\nScore:" + score + "\nChance(s):" + tries + "\nEnter Number: ");
+		System.out.print("[debug] number is: "+ random + "\n");
+		System.out.print("\nScore:" + score + "\nChance(s):" + tries + "\nEnter Number: ");
 	    
-	    int guess = in.nextInt();
+	    	int guess = in.nextInt();
 
-	    if(guess == random) //if the answer is correct
-	    {
-	        score++; //add score
-	        randomInt(); //new random number
-            	core(in); //calls this function
+	    	if(guess == random) //if the answer is correct
+	    	{
+			score++; //add score
+			randomInt(); //new random number
+			core(in); //calls this function
 		} else {
 		    	int check = ((random > guess) ? 1 : 0); //
-			if(tries <= 1) //hack, fix being able to guess when there's 0 chance
+			if(tries <= 1) //fix being able to guess when there's 0 chance
 			{
 			    System.out.println("--[ Game over! ]--\nTry Again [1/0]? ");
 			    if(in.nextInt() == 1)
@@ -47,7 +47,7 @@ public class Rndm{
 			        case 1: System.out.println("> TIP: Higher <"); break;
 			        case 0: System.out.println("> TIP: Lower <"); break;
 			    }
-			    tries--; //lessen try count
+			    tries--; //decrease try count
 			    core(in); //calls this function
 			}
 		}
@@ -55,13 +55,13 @@ public class Rndm{
 	
 	public static void randomInt()
 	{
-        int a = new Random().nextInt(10); //returns new random number
+        	int a = new Random().nextInt(10); //returns new random number
         
-        if(a == random)
-        {
-           randomInt(); //re-run if it is the same as the last one
-        }
+		if(a == random)
+		{
+		   randomInt(); //re-run if it is the same as the last one
+		}
         
-        random = a; //save the new random number
+        	random = a; //save the new random number
 	}
 }
